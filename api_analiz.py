@@ -6,10 +6,10 @@ from nltk.corpus import stopwords
 
 
 # Twitter API Anahtarları
-consumer_key = " Z2gQpYSDiwexTLTmAo4pYwTps"
-consumer_secret = "CxiIT1FYSyax2ctZWOJHi5OKfzMy0Gbd3q0IBncHM4gHx0ZNkz"
-access_token = "289370291-UHtSIZLDpTqouJ3pWiKuNGnL6edoMQOyjTChvGm8"
-access_token_secret = "fgZOTtinskJ6DQ1unNuMI99KznmGhG1nDT1swiW3boAKQ"
+consumer_key = " "
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
 # Tweepy ile Twitter API'ye bağlanma
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -36,7 +36,7 @@ def preprocess_tweet(tweet):
     return ' '.join(tweet_tokens)
 
 # Belirli bir konu üzerindeki tweet'leri çekme
-topic = "sığınmacı"
+topic = ""
 tweet_count = 10  
 tweets = tweepy.Cursor(api.search_tweets, q=topic, lang="tr").items(tweet_count)
 
